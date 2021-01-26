@@ -18,7 +18,7 @@ class GasPrices extends React.Component {
         console.log(res);
       })
       .catch(err=>{
-        console.log(err.response);
+        console.log(err.response.data.error);
       })
   };
 
