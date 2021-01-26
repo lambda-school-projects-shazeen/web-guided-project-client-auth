@@ -3,16 +3,12 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import Login from './components/Login';
 import GasPrices from './components/GasPrices';
-
-import axios from 'axios';
+import { axiosWithAuth } from './utils/axiosWithAuth';
 
 function App() {
   const logout = () => {
-    axios.post('http://localhost:5000/api/logout', {
-      headers: {
-        Authorization: localStorage.getItem('token')
-      }
-    })
+    axiosWithAuth()
+      .post('http://localhost:5000/api/logout')
       .then(res=>{
         localStorage.removeItem('token');
         window.location.href =  '/login';
