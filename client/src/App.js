@@ -26,6 +26,7 @@ function App() {
             <Link to="/protected">Protected Page</Link>
           </li>
         </ul>
+
         <Switch>
           <Route exact path="/protected" component={GasPrices} />
           <Route path="/login" component={Login} />
