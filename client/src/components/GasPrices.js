@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import Loader from 'react-loader-spinner';
+import axios from 'axios';
 
 class GasPrices extends React.Component {
   state = {
@@ -11,7 +12,9 @@ class GasPrices extends React.Component {
     this.getData();
   }
 
-  getData = () => {};
+  getData = () => {
+
+  };
 
   formatData = () => {
     const formattedData = [];
