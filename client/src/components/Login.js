@@ -22,7 +22,7 @@ class Login extends React.Component {
     e.preventDefault();
     axios.post('http://localhost:5000/api/login', this.state.credentials)
       .then(res=>{
-        console.log(res);
+        console.log(res.data.payload);
       })
       .catch(err=>{
         console.log(err);
