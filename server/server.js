@@ -42,7 +42,6 @@ app.post("/api/logout", (req, res) => {
 });
 
 app.get("/api/data", authenticator, (req, res) => {
-  console.log(req);
   setTimeout(() => {
     res.send(data);
   }, 1000);
