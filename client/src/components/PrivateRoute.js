@@ -9,12 +9,11 @@ import { Route, Redirect } from 'react-router-dom';
 
 
 const PrivateRoute = ({component: Component, ...rest}) =>  {
-    return(<Route {...props} render={
+    return(<Route {...rest} render={
         (props) => {
             return <Component {...props}/>
         }
     }/>);
-
 };
 
 export default PrivateRoute;
