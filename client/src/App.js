@@ -17,7 +17,7 @@ function App() {
     axios.post('http://localhost:5000/api/logout', reqInfo)
       .then(res=>{
         localStorage.removeItem('token');
-        console.log(window.location);
+        window.location.href =  '/login';
       })
       .catch(err=>{
         console.log(err);
