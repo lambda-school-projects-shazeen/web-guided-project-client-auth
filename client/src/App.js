@@ -15,6 +15,7 @@ function App() {
     })
       .then(res=>{
         localStorage.removeItem('token');
+        console.log(window.location);
       })
       .catch(err=>{
         console.log(err);
