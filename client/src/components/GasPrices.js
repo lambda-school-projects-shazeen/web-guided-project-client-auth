@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import Loader from 'react-loader-spinner';
-import axios from 'axios';
 
 import { axiosWithAuth } from './../utils/axiosWithAuth';
 
