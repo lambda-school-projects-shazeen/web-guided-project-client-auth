@@ -5,6 +5,7 @@ import Login from './components/Login';
 import GasPrices from './components/GasPrices';
 import PrivateRoute from './components/PrivateRoute';
 import { axiosWithAuth } from './utils/axiosWithAuth';
+import Loader from 'react-loader-spinner';
 
 function App() {
   const logout = () => {
@@ -30,8 +31,9 @@ function App() {
           <li>
             <Link onClick={logout}>Logout</Link>
           </li>
-          <li>
-            <Link to="/protected">Protected Page</Link>
+          <li>{
+              (localStorage.getItem('token') && <Link to="/protected">Protected Page</Link>)
+            }
           </li>
         </ul>
 
