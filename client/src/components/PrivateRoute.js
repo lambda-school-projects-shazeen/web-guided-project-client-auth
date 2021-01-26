@@ -13,8 +13,9 @@ const PrivateRoute = ({component: Component, ...rest}) =>  {
         (props) => {
             if (localStorage.getItem("token")) {
                 return <Component {...props}/>;
+            } else {
+                return(<h1>NOT THERE!!!</h1>)
             }
-            
         }
     }/>);
 };
